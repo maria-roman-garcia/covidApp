@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import './App.scss';
 import Definition from './Definition/Definition';
 import ActualSituation from './ActualSituation/ActualSituation'
@@ -34,10 +34,10 @@ const App = () => {
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          <Definition/>
+          <Definition />
         </TabPane>
         <TabPane tabId="2">
-          <ActualSituation/>
+          <ActualSituation />
         </TabPane>
       </TabContent>
     </div>
