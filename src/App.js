@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import './App.scss';
+import Definition from './Definition/Definition';
+import ActualSituation from './ActualSituation/ActualSituation'
 
-function App() {
+const App = () => {
+
+  const [activeTab, setActiveTab] = useState('1');
+
+  const toggle = tab => {
+    if (activeTab !== tab) setActiveTab(tab);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav tabs>
+        <NavItem>
+          <NavLink
+            className={{ active: activeTab === '1' }}
+            onClick={() => { toggle('1'); }}
+          >
+            ¿Qué es?
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={{ active: activeTab === '2' }}
+            onClick={() => { toggle('2'); }}
+          >
+            Situación Actual
+          </NavLink>
+        </NavItem>
+      </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          <Definition/>
+        </TabPane>
+        <TabPane tabId="2">
+          <ActualSituation/>
+        </TabPane>
+      </TabContent>
     </div>
   );
 }
