@@ -1,0 +1,39 @@
+.ActualSituation {
+
+    & .inputSearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+
+        & .form-control {
+            transition: width 0.4s ease-in-out !important;
+            border-radius: 20px !important;
+            width: 40% !important;
+            margin-left: 5px;
+        }
+
+        & .form-control:focus {
+            width: 80% !important;
+        }
+    }
+
+    & .countryCardContainer {
+        display: flex;
+        justify-content: center;
+
+        & .countryCard {
+            background-color: rgba(253, 225, 235, 0.418);
+            margin: 10px;
+            border-radius: 20px;
+            padding: 20px;
+
+            & .countryCardText {
+                display: flex;
+                justify-content: center;
+                color: #f50057;
+                font-weight: bold;
+            }
+        }
+    }
+}
