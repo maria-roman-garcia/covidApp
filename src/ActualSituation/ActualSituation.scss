@@ -1,10 +1,13 @@
 .ActualSituation {
+    p{
+        margin: 0;
+    }
 
     & .inputSearch {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2em;
+        margin: 2em 0;
 
         & .form-control {
             transition: width 0.4s ease-in-out !important;
@@ -18,21 +21,33 @@
         }
     }
 
+    & .prueba{
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
     & .countryCardContainer {
         display: flex;
         justify-content: center;
 
         & .countryCard {
-            background-color: rgba(253, 225, 235, 0.418);
             margin: 10px;
             border-radius: 20px;
             padding: 20px;
+            box-shadow: 10px 18px 42px -19px rgba(0, 0, 0, 0.66);
 
             & .countryCardText {
                 display: flex;
                 justify-content: center;
                 color: #f50057;
                 font-weight: bold;
+            }
+
+            & .progress-bar {
+                background-color: #f50057 !important;
             }
         }
     }
