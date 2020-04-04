@@ -47,7 +47,7 @@ const ActualSituation = (props) => {
   return (
     <div className="container-fluid ActualSituation">
       {isLoading
-        ? <Spinner color="info" />
+        ? <div style={{display:"flex", justifyContent:"center"}}><Spinner color="info" /></div>
         : <div>
           <div className="row inputSearch">
             {searchIcon}<input className="form-control" id="inputCountrySearch" value={PalabraBuscada} onChange={(event) => setPalabraBuscada(event.target.value)} placeholder="¿Qué país quieres buscar? (En inglés)" />
